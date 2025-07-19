@@ -38,7 +38,7 @@ const Projects = () => {
       image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop&crop=center',
       technologies: ['React.js', 'Framer Motion', 'CSS3', 'React Icons'],
       github: 'https://github.com/kavyaNamballa/portfolio',
-      live: 'https://kavya-portfolio.vercel.app',
+      live: 'https://kavyanamballa.github.io/portfolio/',
       category: 'Frontend'
     },
     {

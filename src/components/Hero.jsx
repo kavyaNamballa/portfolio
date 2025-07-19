@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-scroll';
-import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaEnvelope, FaDownload } from 'react-icons/fa';
 import './Hero.css';
 
 const Hero = () => {
@@ -22,6 +22,15 @@ const Hero = () => {
       label: 'Email'
     }
   ];
+
+  const handleResumeDownload = () => {
+    const link = document.createElement('a');
+    link.href = './Resume.pdf';
+    link.download = 'Kavya_Namballa_Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
   return (
     <section id="home" className="hero">
@@ -76,6 +85,12 @@ const Hero = () => {
               >
                 View My Work
               </Link>
+              <button
+                onClick={handleResumeDownload}
+                className="btn btn-resume"
+              >
+                <FaDownload /> Download Resume
+              </button>
               <Link
                 to="contact"
                 smooth={true}
